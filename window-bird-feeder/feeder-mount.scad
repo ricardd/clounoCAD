@@ -16,6 +16,8 @@ size1=[tray_width, backplate_depth],
 h=tray_height/1.5,
 xang=90, 
 yang=[90,160],
-anchor=TOP+FRONT
+anchor=TOP+FRONT,
+rounding1=5,
+rounding2=5
 );
 

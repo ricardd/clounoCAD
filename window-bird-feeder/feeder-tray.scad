@@ -10,18 +10,27 @@ tray_thickness=3;
 
 backplate_depth=10;
 
+rounding_1=6;
 
 perch_distance=35;
 perch_width=3;
 perch_height=8;
 
 difference(){
+translate([0,0,rounding_1/2])
     union(){
+        minkowski(){
+        union(){
     outer_volume();
     back_plate();
-    spindles();
+            }
+    sphere(d=rounding_1);
+        }
+translate([0,0,-rounding_1/2])
+union(){    spindles();
     perch();
     }
+}
 inner_volume();
 }
 
@@ -40,10 +49,10 @@ anchor=BOTTOM+FRONT
 
 module inner_volume() {
 // inner volume to remove
-translate([0,tray_thickness,tray_thickness])    
+translate([0,tray_thickness+(rounding_1/3),tray_thickness])    
 prismoid(
-size1=[tray_width-(2*tray_thickness),tray_depth-(2*tray_thickness)], 
-h=tray_height, 
+size1=[tray_width-(2*tray_thickness),tray_depth-(2*tray_thickness)-(rounding_1/2)], 
+h=tray_height+(rounding_1/1), 
 xang=tray_angle, 
 yang=[90,tray_angle],
 rounding=10,
@@ -65,6 +74,16 @@ color([1,0,0])
     translate([0,tray_thickness,tray_height])
 prismoid(
 size1=[tray_width+34, backplate_depth+3],
+h=tray_height/1.5,
+xang=90, 
+yang=[90,60],
+anchor=BOTTOM+BACK
+);
+color([1,0,0])
+    yrot(180)
+    translate([0,tray_thickness,0])
+prismoid(
+size1=[tray_width, backplate_depth+3],
 h=tray_height/1.5,
 xang=90, 
 yang=[90,60],
