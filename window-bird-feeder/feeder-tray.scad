@@ -34,6 +34,19 @@ union(){    spindles();
 inner_volume();
 }
 
+    tray();
+
+
+    back_plate();
+
+module tray() {
+difference(){
+    outer_volume();
+inner_volume();
+}
+}
+
+
 // parts as modules
 module outer_volume() {
     // outer volume
