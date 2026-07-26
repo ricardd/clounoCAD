@@ -29,6 +29,7 @@ $move = -($wall_width/4)+($outer_diameter_1+$outer_diameter_2)/4;
 
 bucket();
 translate([0,0,100])
+left(50) up(90)
 lid();
 
 
