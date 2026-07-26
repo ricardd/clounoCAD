@@ -27,8 +27,8 @@ $outer_diameter_lid = $outer_diameter_2 + $lip -5;
 $move = -($wall_width/4)+($outer_diameter_1+$outer_diameter_2)/4;
 
 
-//bucket();
-//translate([0,0,100])
+bucket();
+left(50) up(90)
 lid();
 
 

@@ -1,0 +1,63 @@
+{
+    "parameterSets": {
+        "example 1": {
+            "$fn": "6",
+            "base_thickness": "4",
+            "height": "100",
+            "radius": "30",
+            "scale": "0.6",
+            "slices": "50",
+            "wall_thickness": "2.4",
+            "wave_amplitude": "8",
+            "wave_start_angle": "135",
+            "waves": "0.5"
+        },
+        "example 2": {
+            "$fn": "180",
+            "base_thickness": "2.4",
+            "height": "75",
+            "radius": "25",
+            "scale": "1",
+            "wall_thickness": "2",
+            "wave_amplitude": "16.5",
+            "wave_start_angle": "0",
+            "waves": "0.62"
+        },
+        "example 3": {
+            "$fn": "8",
+            "base_thickness": "3.2",
+            "height": "100",
+            "radius": "25",
+            "scale": "1.5",
+            "slices": "200",
+            "wall_thickness": "2.2",
+            "wave_amplitude": "1.5",
+            "wave_start_angle": "90",
+            "waves": "5"
+        },
+        "example 4": {
+            "$fn": "180",
+            "base_thickness": "2.4",
+            "height": "100",
+            "radius": "15",
+            "scale": "2.5",
+            "wall_thickness": "2",
+            "wave_amplitude": "8",
+            "wave_start_angle": "72",
+            "waves": "1.1"
+        },
+        "example 5": {
+            "$fn": "180",
+            "base_thickness": "2.4",
+            "height": "96",
+            "radius": "30",
+            "scale": "0.5",
+            "slices": "12",
+            "wall_thickness": "2",
+            "wave_amplitude": "5",
+            "wave_start_angle": "0",
+            "waves": "2.87"
+        }
+    },
+    "fileFormatVersion": "1"
+}
