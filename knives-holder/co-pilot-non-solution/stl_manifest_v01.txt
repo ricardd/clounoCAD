@@ -1,0 +1,30 @@
+Generated STL parts for Wet-Lab Tool Holder (v0.1)
+Body: holder_body_v01.stl
+Negative cutters (import as Negative Part in Bambu Studio):
+ - cutter_drip_1.stl
+ - cutter_drip_2.stl
+ - cutter_drip_3.stl
+ - cutter_drip_4.stl
+ - cutter_drip_5.stl
+ - cutter_drip_6.stl
+ - cutter_knife_large_1.stl
+ - cutter_knife_large_2.stl
+ - cutter_knife_small_1.stl
+ - cutter_knife_small_2.stl
+ - cutter_tweezer_1.stl
+ - cutter_tweezer_2.stl
+ - cutter_tweezer_3.stl
+ - cutter_magnet_top_1.stl
+ - cutter_magnet_top_2.stl
+ - cutter_magnet_top_3.stl
+ - cutter_magnet_top_4.stl
+ - cutter_magnet_top_5.stl
+ - cutter_magnet_bot_1.stl
+ - cutter_magnet_bot_2.stl
+ - cutter_magnet_bot_3.stl
+
+Key Params:
+W=248.0, H=240.0, D=90.0
+Knife tilt=30.0 deg; mouth=20.0 mm -> throat=10.0 mm
+Magnets: d=8.0 t=4.0 (clear=0.2) topZ=237.40 botZ=187.40
+Pause at Z: 239.40 mm (for cap layer printing)
