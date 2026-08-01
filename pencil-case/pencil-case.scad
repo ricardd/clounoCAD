@@ -10,7 +10,7 @@ my_r=27;
 end_h=10;
 
 side_h=25;
-side_w=200;
+side_w=190;
 side_d=2;
 
 up(10)left(25)
