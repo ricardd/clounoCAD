@@ -14,7 +14,10 @@ cross_section_points_inner = [[0,0],[w1,0],[w1,h1],[w2,h2],[0,h1]];
 
 cross_section_points_outer =[[-t1,-t1],[w1+t1,-t1],[w1+t1,h1],[w2,h2+t1],[-t1,h1],[-t1,-t1]];
 
-blade_length=164;
+//blade_length=164;
+blade_length=110;
+
+shank_angle=0;
 
 //include<knives.scad>
 //right(168) back(3) 
@@ -29,24 +32,41 @@ sleeve(blade_length);
 
 
 up(t1)
-back(9)
-right(20)
+back(10)
+right(15)
 single_magnet_insert(magnet_d,magnet_h);
 
 up(t1)
-back(9)
-right(57)
+back(10)
+right(30)
+single_magnet_insert(magnet_d,magnet_h);
+
+
+up(t1)
+back(10)
+right(73)
 single_magnet_insert(magnet_d,magnet_h);
 
 up(t1)
-back(9)
-right(94)
+back(10)
+right(88)
 single_magnet_insert(magnet_d,magnet_h);
 
-up(t1)
-back(9)
-right(131)
-single_magnet_insert(magnet_d,magnet_h);
+
+//up(t1)
+//back(10)
+//right(110)
+//single_magnet_insert(magnet_d,magnet_h);
+//
+//up(t1)
+//back(10)
+//right(125)
+//single_magnet_insert(magnet_d,magnet_h);
+
+//up(t1)
+//back(10)
+//right(140)
+//single_magnet_insert(magnet_d,magnet_h);
 }
 
 
@@ -63,7 +83,7 @@ linear_extrude(kl)
 polygon(cross_section_points_outer);
 }
 up(kl-7)
-xrot(15)
+xrot(shank_angle)
 cuboid([30,70,10], anchor=BOT);
 
 }
@@ -75,7 +95,7 @@ down(1)
 linear_extrude(kl+3)
 polygon(cross_section_points_inner);
 
-holes(6,3.5,t1*3);
+holes(6,3.5,t1*6);
 
 }
 }
@@ -85,8 +105,8 @@ module single_magnet_insert(d,h){
 //cyl(d=d,h=h,anchor=BOT);
 
 difference(){
-regular_prism(10, side1=6.5, ir2=6, height=10, anchor=BOT);
-up(3.3)
+regular_prism(6, side1=12, ir2=7, height=8, anchor=BOT);
+up(5.3)
 cuboid([d,d,h],anchor=BOT);
 //cyl(d=d, h=h,anchor=BOT);
 
@@ -98,15 +118,15 @@ cuboid([d,d,h],anchor=BOT);
 module holes(n_sides,hex_r,hex_h){
 
 // hex pattern
-for(y=[1:1:15])
- for(x=[1:1:2])
- right(8) back((x*10)-5) up((y*9.6)+(x*3))
+for(y=[1:1:10])
+ for(x=[1:1:3])
+ right(8) back((x*10)-5) up((y*9.5)+(x*3)-7)
  //color([1,0,0])
   yrot(90)
   zrot(30)
-
  regular_prism(6,r=hex_r,h=hex_h);
 
+ 
 //down(w1+t1) right(10) back(10)
 //zrot(0.5*(180-(((n_sides-2)*180)/n_sides)))
 //regular_prism(n_sides, r=3, h=t1*3);
