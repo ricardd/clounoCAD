@@ -50,9 +50,9 @@ magnet_inset(magnet_d,magnet_h);
 module magnet_inset(d,h){
 
 difference(){
-cuboid([d+3.5,d+3.6,h+4], rounding=2, edges=[BOTTOM+BACK,BOTTOM+LEFT,BOTTOM+RIGHT]);
+cuboid([d+12,d+3.6,h+4], rounding=2, edges=[BOTTOM+BACK,BOTTOM+LEFT,BOTTOM+RIGHT]);
 down(2.5)
-cuboid([d,d,h],anchor=BOT);
+cuboid([d*2,d,h],anchor=BOT);
 
 
 }
